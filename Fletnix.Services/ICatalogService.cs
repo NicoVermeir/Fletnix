@@ -7,5 +7,7 @@ namespace Fletnix.Services
     {
         IList<CatalogItem> GetMovies();
         void SaveCatalogItem(CatalogItem item);
+
+        void UpdateCatalogItem(CatalogItem item);
     }
 }

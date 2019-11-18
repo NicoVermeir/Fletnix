@@ -22,5 +22,10 @@ namespace Fletnix.Services
         {
             _catalogRepository.Create(item);
         }
+
+        public void UpdateCatalogItem(CatalogItem item)
+        {
+            _catalogRepository.Update(item);
+        }
     }
 }
