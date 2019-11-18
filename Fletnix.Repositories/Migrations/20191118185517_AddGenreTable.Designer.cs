@@ -3,14 +3,16 @@ using Fletnix.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Fletnix.Repositories.Migrations
 {
     [DbContext(typeof(FletnixContext))]
-    partial class FletnixContextModelSnapshot : ModelSnapshot
+    [Migration("20191118185517_AddGenreTable")]
+    partial class AddGenreTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
