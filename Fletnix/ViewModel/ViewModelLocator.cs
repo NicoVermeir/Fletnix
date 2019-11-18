@@ -15,6 +15,7 @@ namespace Fletnix.ViewModel
             
             builder.RegisterType<MainViewModel>().SingleInstance();
             builder.RegisterType<CreateCatalogItemViewModel>().SingleInstance();
+            builder.RegisterType<CreateGenreViewModel>().SingleInstance();
             builder.RegisterInstance(new CatalogItemDetailViewModel()).SingleInstance();
 
             _container = builder.Build();
@@ -29,6 +30,7 @@ namespace Fletnix.ViewModel
 
         public MainViewModel Main => _container.Resolve<MainViewModel>();
         public CreateCatalogItemViewModel CreateCatalogItem => _container.Resolve<CreateCatalogItemViewModel>();
+        public CreateGenreViewModel CreateGenre => _container.Resolve<CreateGenreViewModel>();
         public CatalogItemDetailViewModel CatalogItemDetail => _container.Resolve<CatalogItemDetailViewModel>();
     }
 }

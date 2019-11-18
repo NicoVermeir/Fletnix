@@ -19,14 +19,20 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
-        <Button Grid.Row="0"
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <Button 
                 Margin="16"
                 HorizontalAlignment="Right"
                 Click="ButtonAddCatalogItem_Click"
-                Content="+"
-                FontSize="36" />
+                Content="Film toevoegen"
+                FontSize="16" />
+            <Button                 Margin="16"
+                HorizontalAlignment="Right"
+                Click="ButtonAddGenre_Click"
+                Content="Genre Toevoegen"
+                FontSize="16"/>
 
+        </StackPanel>
         <ListView Grid.Row="1"
                   Padding="20"
                   Background="Transparent"
