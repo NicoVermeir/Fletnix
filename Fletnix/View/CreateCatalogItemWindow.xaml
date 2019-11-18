@@ -1,0 +1,27 @@
+﻿<Window x:Class="Fletnix.View.CreateCatalogItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Fletnix.View"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="CreateCatalogItemWindow"
+        Width="800"
+        Height="450"
+        DataContext="{Binding CreateCatalogItem, Source={StaticResource Locator}}"
+        mc:Ignorable="d">
+    <StackPanel>
+        <TextBlock Margin="16,16,16,0" Text="Titel:" />
+        <TextBox Margin="16,0,16,8" Text="{Binding Title, Mode=TwoWay}" />
+        <TextBlock Margin="16,8,16,0" Text="Jaar:" />
+        <TextBox Margin="16,0,16,8" Text="{Binding NewCatalogItem.Year, Mode=TwoWay}" />
+        <TextBlock Margin="16,8,16,8" Text="Genre:" />
+        <TextBox Margin="16,0,16,8" Text="{Binding NewCatalogItem.Genre, Mode=TwoWay}" />
+        <TextBlock Margin="16,8,16,8" Text="Looptijd:" />
+        <TextBox Margin="16,0,16,8" Text="{Binding NewCatalogItem.RunningTime, Mode=TwoWay}" />
+        <Button Width="200"
+                Margin="16,16,0,0"
+                Click="ButtonSave_OnClick"
+                Command="{Binding AddCatalogItemCommand, Mode=OneTime}"
+                Content="Opslaan" />
+    </StackPanel>
+</Window>

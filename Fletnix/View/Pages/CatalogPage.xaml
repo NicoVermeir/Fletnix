@@ -1,0 +1,72 @@
+﻿<Page x:Class="Fletnix.View.Pages.CatalogPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:converters="clr-namespace:Fletnix.Converters"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      Title="CatalogPage"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      DataContext="{Binding Main, Source={StaticResource Locator}}"
+      mc:Ignorable="d">
+
+    <Page.Resources>
+        <converters:StringToImageSourceConverter x:Key="StringToImageSourceConverter" />
+    </Page.Resources>
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0"
+                Margin="16"
+                HorizontalAlignment="Right"
+                Click="ButtonAddCatalogItem_Click"
+                Content="+"
+                FontSize="36" />
+
+        <ListView Grid.Row="1"
+                  Padding="20"
+                  Background="Transparent"
+                  BorderThickness="0"
+                  Foreground="White"
+                  ItemsSource="{Binding Catalog}"
+                  SelectedItem="{Binding SelectedCatalogItem, Mode=TwoWay}"
+                  SelectionChanged="Selector_OnSelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="120"
+                          Height="150"
+                          Margin="0,0,0,12"
+                          Background="Gray">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding Title, Converter={StaticResource StringToImageSourceConverter}}" />
+                        <TextBlock Grid.Row="1"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Bottom"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   Text="{Binding Title}" />
+                        <TextBlock Grid.Row="2"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Bottom"
+                                   FontSize="12"
+                                   Foreground="LightGray"
+                                   Text="{Binding Genre}" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

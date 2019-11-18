@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix", "Fletnix\Fletnix.csproj", "{5C7664AA-93C3-4B05-A3A1-14EE722B97C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Model", "Fletnix.Model\Fletnix.Model.csproj", "{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Services", "Fletnix.Services\Fletnix.Services.csproj", "{1418C7EA-B0A4-412A-AA29-2217DE2892E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Repositories", "Fletnix.Repositories\Fletnix.Repositories.csproj", "{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C7664AA-93C3-4B05-A3A1-14EE722B97C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7664AA-93C3-4B05-A3A1-14EE722B97C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7664AA-93C3-4B05-A3A1-14EE722B97C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7664AA-93C3-4B05-A3A1-14EE722B97C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1418C7EA-B0A4-412A-AA29-2217DE2892E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1418C7EA-B0A4-412A-AA29-2217DE2892E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1418C7EA-B0A4-412A-AA29-2217DE2892E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1418C7EA-B0A4-412A-AA29-2217DE2892E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6841ACC8-E458-4ACD-950E-BDA05FEEB47D}
+	EndGlobalSection
+EndGlobal
