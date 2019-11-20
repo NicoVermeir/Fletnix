@@ -14,26 +14,17 @@ namespace Fletnix.ViewModel
         private readonly IGenreService _genreService;
 
         private RelayCommand _addGenreCommand;
-        private string _name;
 
         public Genre NewGenre { get; set; }
 
         public RelayCommand AddGenreCommand => _addGenreCommand ??= new RelayCommand(AddGenre);
 
-        public string Name
-        {
-            get => _name;
-            set
-            {
-                _name = value;
-            }
-        }
+        public string Name { get; set; }
 
         public CreateGenreViewModel(IGenreService genreService)
         {
             _genreService = genreService;
             NewGenre = new Genre();
-
         }
 
         private void AddGenre()

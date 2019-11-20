@@ -10,7 +10,6 @@ namespace Fletnix.Services
     {
         private readonly IRepository<Genre> _genreRepository;
 
-
         public GenreService(IRepository<Genre> genreRepository)
         {
             _genreRepository = genreRepository;
@@ -19,7 +18,6 @@ namespace Fletnix.Services
         {
             return _genreRepository.Get();
         }
-
         public void SaveGenre(Genre item)
         {
             _genreRepository.Create(item);

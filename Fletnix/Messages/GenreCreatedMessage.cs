@@ -8,6 +8,7 @@ namespace Fletnix.Messages
     public class GenreCreatedMessage
     {
         public Genre NewGenre { get; set; }
+
         public GenreCreatedMessage(Genre newGenre)
         {
             NewGenre = newGenre;
