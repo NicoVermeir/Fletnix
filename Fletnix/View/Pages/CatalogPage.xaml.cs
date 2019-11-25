@@ -46,5 +46,10 @@ namespace Fletnix.View.Pages
         {
             new CreateCatalogItemWindow().ShowDialog();
         }
+
+        private void ButtonAddGenre_Click(object sender, RoutedEventArgs e)
+        {
+            new CreateGenreWindow().ShowDialog();
+        }
     }
 }

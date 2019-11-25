@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Fletnix.Messages;
@@ -27,8 +28,6 @@ namespace Fletnix.ViewModel
 
         public ObservableCollection<CatalogItem> Catalog { get; set; }
 
-        
-
         // field krijgt pas instantie als property voor de eerste keer aangeroepen word
         //public ICommand CounterClickCommand =>
         //    _counterClickCommand ?? (_counterClickCommand = new RelayCommand(CounterClicked));
@@ -51,16 +50,21 @@ namespace Fletnix.ViewModel
         //    get { return "Hello world"; }
         //}
 
-
         public MainViewModel(ICatalogService catalogService)
         {
             _catalogService = catalogService;
 
             IList<CatalogItem> catalog = _catalogService.GetMovies();
+
             //Catalog = _catalogService.GetMovies().ToList();
             Catalog = new ObservableCollection<CatalogItem>(catalog);
 
             MessengerInstance.Register<CatalogItemCreatedMessage>(this, OnCatalogItemCreated);
+        }
+
+        private void OnGenreCreated(GenreCreatedMessage message)
+        {
+            throw new NotImplementedException();
         }
 
         private void OnCatalogItemCreated(CatalogItemCreatedMessage message)
