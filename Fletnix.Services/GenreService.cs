@@ -10,7 +10,6 @@ namespace Fletnix.Services
     {
         private readonly IRepository<Genre> _genreRepository;
 
-
         public GenreService(IRepository<Genre> genreRepository)
         {
             _genreRepository = genreRepository;

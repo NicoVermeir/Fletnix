@@ -33,7 +33,6 @@ namespace Fletnix.ViewModel
         {
             _genreService = genreService;
             NewGenre = new Genre();
-
         }
 
         private void AddGenre()

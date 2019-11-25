@@ -10,6 +10,5 @@ namespace Fletnix.Services
         IList<Genre> GetGenres();
 
         void SaveGenre(Genre item);
-
     }
 }
