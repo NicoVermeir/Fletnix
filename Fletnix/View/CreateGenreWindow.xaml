@@ -1,0 +1,19 @@
+﻿<Window x:Class="Fletnix.View.CreateGenreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fletnix.View"
+        DataContext="{Binding CreateGenre, Source={StaticResource Locator}}"
+        mc:Ignorable="d"
+        Title="CreateGenreWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Margin="16,16,16,0" Text="Titel:" />
+        <TextBox Margin="16,0,16,8" Text="{Binding Name, Mode=TwoWay}" />
+        <Button Width="200"
+                Margin="16,16,0,0"
+                Click="ButtonSave_OnClick"
+                Command="{Binding AddGenreCommand, Mode=OneTime}"
+                Content="Opslaan" />
+    </StackPanel>
+</Window>

@@ -7,6 +7,7 @@ namespace Fletnix.Repositories.Infrastructure
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<CatalogItemRepository>().AsImplementedInterfaces();
+            builder.RegisterType<GenreRepository>().AsImplementedInterfaces();
         }
     }
 }
