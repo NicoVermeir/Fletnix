@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Fletnix.Repositories
 {
@@ -30,7 +31,8 @@ namespace Fletnix.Repositories
 
         public IList<Genre> Get()
         {
-            throw new NotImplementedException();
+            var context = new FletnixContext();
+            return context.Genre.ToList();
         }
 
         public Genre GetById(int id)
