@@ -1,18 +1,86 @@
 ﻿<Page x:Class="Fletnix.View.Pages.CatalogItemDetailPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"      
+      xmlns:converters="clr-namespace:Fletnix.Converters"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       Title="CatalogItemDetailPage"
       d:DesignHeight="450"
       d:DesignWidth="800"
+      FontFamily="Blackadder ITC"
       DataContext="{Binding CatalogItemDetail, Source={StaticResource Locator}}"
       mc:Ignorable="d">
 
+    <Page.Resources>
+        <converters:StringToImageSourceConverter x:Key="StringToImageSourceConverter" />
+    </Page.Resources>
+
     <Grid>
-        <TextBlock HorizontalAlignment="Center"
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   FontSize="36"
+                   FontSize="46"
                    Text="{Binding CatalogItem.Title}" />
+
+            <Image
+                Margin="0,20"
+                Width="300"
+                Source="{Binding CatalogItem.Title,  Converter={StaticResource StringToImageSourceConverter}}"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                
+                <Label
+                    VerticalAlignment="Center"
+                    Content="Like"
+                    Margin="0 0,50,0"
+                    Foreground="#f64239"
+                    FontSize="30"/>
+                
+                <TextBlock 
+                    VerticalAlignment="Center"
+                    FontSize="30"
+                    Text="{Binding NumberOfLikes, Mode=OneWay}"/>
+                
+                <Label 
+                    VerticalAlignment="Center"
+                    Content="Dislike"
+                    Margin="50 0"
+                    Foreground="#3ae452"
+                    FontSize="30"/>
+                
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="30"
+                    Text="{Binding NumberOfDislikes, Mode=OneWay}"/>
+            </StackPanel>
+
+            <StackPanel
+                Margin="0,30"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+                <Button x:Name="btnLike"
+                        Margin="5,0"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Command="{Binding AddLikeCommand, Mode=OneTime}">
+                    <Image
+                        Width="100"
+                        Source="/Fletnix;component/Assets/LikeIcon.png"/>
+                </Button>
+
+                <Button x:Name="btnDislike"
+                        Margin="5,0"                        
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Command="{Binding AddDislikeCommand, Mode=OneTime}">
+                    <Image 
+                        Width="100"
+                        Source="/Fletnix;component/Assets/DisLikeIcon.png"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        
     </Grid>
 </Page>

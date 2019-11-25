@@ -16,9 +16,10 @@ namespace Fletnix.ViewModel
             builder.RegisterType<MainViewModel>().SingleInstance();
             builder.RegisterType<CreateCatalogItemViewModel>().SingleInstance();
             builder.RegisterType<CreateGenreViewModel>().SingleInstance();
-            builder.RegisterInstance(new CatalogItemDetailViewModel()).SingleInstance();
+            builder.RegisterType<CatalogItemDetailViewModel>().SingleInstance();
 
             _container = builder.Build();
+            _container.Resolve<CatalogItemDetailViewModel>();
 
             // Inversion Of Control pattern
             // Dependency Injection
