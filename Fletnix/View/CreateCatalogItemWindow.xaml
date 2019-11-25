@@ -15,7 +15,7 @@
         <TextBlock Margin="16,8,16,0" Text="Jaar:" />
         <TextBox Margin="16,0,16,8" Text="{Binding NewCatalogItem.Year, Mode=TwoWay}" />
         <TextBlock Margin="16,8,16,8" Text="Genre:" />
-        <TextBox Margin="16,0,16,8" Text="{Binding NewCatalogItem.Genre, Mode=TwoWay}" />
+        <ComboBox Margin="16,0,16,8" SelectedItem="{Binding NewCatalogItem.Genre}" ItemsSource="{Binding Genres, Mode=TwoWay}" DisplayMemberPath="Name" />
         <TextBlock Margin="16,8,16,8" Text="Looptijd:" />
         <TextBox Margin="16,0,16,8" Text="{Binding NewCatalogItem.RunningTime, Mode=TwoWay}" />
         <Button Width="200"

@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Fletnix.Model;
 
 namespace Fletnix.View
 {
