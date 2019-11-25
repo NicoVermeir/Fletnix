@@ -20,10 +20,7 @@ namespace Fletnix.Repositories
             catch (Exception)
             {
                 return false;
-          
             }
-            
-
         }
 
         public bool Delete(Genre item)
