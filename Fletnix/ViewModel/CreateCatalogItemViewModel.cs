@@ -39,7 +39,9 @@ namespace Fletnix.ViewModel
             _catalogService = catalogService;
             _genreService = genreService;
             NewCatalogItem = new CatalogItem();
+
             IList<Genre> genres = _genreService.GetGenres();
+
             Genres = new ObservableCollection<Genre>(genres);
         }
         public Genre genre
