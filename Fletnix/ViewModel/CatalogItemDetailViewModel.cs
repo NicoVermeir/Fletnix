@@ -7,19 +7,18 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Fletnix.Services;
 
-
 namespace Fletnix.ViewModel
 {
     public class CatalogItemDetailViewModel : ViewModelBase
     {
         // Fields
-        private int? _numberOfLikes;
-        private int? _numberOfDislikes;
+        private int _numberOfLikes;
+        private int _numberOfDislikes;
         private readonly ICatalogService _catalogService;
         private CatalogItem _catalogItem;
 
         // Properties
-        public int? NumberOfLikes
+        public int NumberOfLikes
         {
             get => _numberOfLikes;
             set
@@ -29,7 +28,7 @@ namespace Fletnix.ViewModel
                 RaisePropertyChanged();
             }
         }
-        public int? NumberOfDislikes
+        public int NumberOfDislikes
         {
             get => _numberOfDislikes;
             set
@@ -39,10 +38,8 @@ namespace Fletnix.ViewModel
                 RaisePropertyChanged();
             }
         }
-
         private RelayCommand _addLikeCommand { get; set; }
         private RelayCommand _addDisLikeCommand { get; set; }
-
         public CatalogItem CatalogItem
         {
             get => _catalogItem;
@@ -53,7 +50,6 @@ namespace Fletnix.ViewModel
         }
 
         // Constructor for view model
-
         public CatalogItemDetailViewModel(ICatalogService catalogService)
         {
             _catalogService = catalogService;
@@ -69,10 +65,8 @@ namespace Fletnix.ViewModel
         }
 
         // Command to add a new like 
-
         public RelayCommand AddLikeCommand =>
             _addLikeCommand ??= new RelayCommand(AddLike);
-
         private void AddLike()
         {
             NumberOfLikes++;
@@ -80,10 +74,8 @@ namespace Fletnix.ViewModel
         }
 
         // Command to add a new dislike
-
         public RelayCommand AddDislikeCommand =>
             _addDisLikeCommand ??= new RelayCommand(AddDislike);
-
         private void AddDislike()
         {
             NumberOfDislikes++;

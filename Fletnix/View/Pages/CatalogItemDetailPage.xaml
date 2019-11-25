@@ -7,7 +7,7 @@
       Title="CatalogItemDetailPage"
       d:DesignHeight="450"
       d:DesignWidth="800"
-      FontFamily="Comic Sans MS"
+      FontFamily="Blackadder ITC"
       DataContext="{Binding CatalogItemDetail, Source={StaticResource Locator}}"
       mc:Ignorable="d">
 
@@ -19,7 +19,7 @@
         <StackPanel>
             <TextBlock HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   FontSize="36"
+                   FontSize="46"
                    Text="{Binding CatalogItem.Title}" />
 
             <Image
@@ -36,11 +36,11 @@
                     Content="Like"
                     Margin="0 0,50,0"
                     Foreground="#f64239"
-                    FontSize="20"/>
+                    FontSize="30"/>
                 
                 <TextBlock 
                     VerticalAlignment="Center"
-                    FontSize="20"
+                    FontSize="30"
                     Text="{Binding NumberOfLikes, Mode=OneWay}"/>
                 
                 <Label 
@@ -48,11 +48,11 @@
                     Content="Dislike"
                     Margin="50 0"
                     Foreground="#3ae452"
-                    FontSize="20"/>
+                    FontSize="30"/>
                 
                 <TextBlock
                     VerticalAlignment="Center"
-                    FontSize="20"
+                    FontSize="30"
                     Text="{Binding NumberOfDislikes, Mode=OneWay}"/>
             </StackPanel>
 
