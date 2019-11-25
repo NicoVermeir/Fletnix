@@ -10,7 +10,7 @@ namespace Fletnix.Repositories
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer("Server=.;Database=Fletnix.Db;Trusted_Connection=True;MultipleActiveResultSets=true");
-            optionsBuilder.UseSqlServer(@"Server=LAPTOP-TBBVTNQO\SYNTRA;Database=Fletnix.Db;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-SVE1DI5\YANNSTUDIO_01;Database=Fletnix.Db;Trusted_Connection=True;MultipleActiveResultSets=true");
             base.OnConfiguring(optionsBuilder);
         }
     }
