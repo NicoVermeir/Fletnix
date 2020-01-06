@@ -1,13 +1,12 @@
 ﻿using Fletnix.Model;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace Fletnix.Services
 {
     public interface IGenreService
     {
-        IList<Genre> GetGenres();
+        Task<IList<Genre>> GetGenres();
 
         void SaveGenre(Genre item);
     }

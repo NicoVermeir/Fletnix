@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+using Fletnix.Api.Repositories;
 using Fletnix.Model;
-using Fletnix.Repositories;
+using Fletnix.Services;
 
-namespace Fletnix.Services
+namespace Fletnix.Api.Services
 {
     public class CatalogService : ICatalogService
     {
@@ -14,7 +14,7 @@ namespace Fletnix.Services
             _catalogRepository = catalogRepository;
         }
 
-        public Task<IList<CatalogItem>> GetMovies()
+        public IList<CatalogItem> GetMovies()
         {
             return _catalogRepository.Get();
         }

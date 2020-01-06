@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Fletnix.Repositories
 {
@@ -29,7 +30,7 @@ namespace Fletnix.Repositories
             throw new NotImplementedException();
         }
 
-        public IList<Genre> Get()
+        public async Task<IList<Genre>> Get()
         {
             var context = new FletnixContext();
             return context.Genre.ToList();

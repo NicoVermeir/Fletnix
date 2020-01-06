@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace Fletnix.Repositories
+namespace Fletnix.Api.Repositories
 {
     public interface IRepository<T>
     {
         bool Create(T item);
 
-        Task<IList<T>> Get();
+        IList<T> Get();
 
         T GetById(int id);
 

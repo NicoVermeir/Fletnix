@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Fletnix.Model;
 using Fletnix.Repositories;
 
@@ -14,7 +15,7 @@ namespace Fletnix.Services
         {
             _genreRepository = genreRepository;
         }
-        public IList<Genre> GetGenres()
+        public Task<IList<Genre>> GetGenres()
         {
             return _genreRepository.Get();
         }

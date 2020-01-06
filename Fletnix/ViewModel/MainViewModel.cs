@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Fletnix.Messages;
 using Fletnix.Model;
@@ -54,12 +55,17 @@ namespace Fletnix.ViewModel
         {
             _catalogService = catalogService;
 
-            IList<CatalogItem> catalog = _catalogService.GetMovies();
+            _ = LoadCatalog();
 
             //Catalog = _catalogService.GetMovies().ToList();
-            Catalog = new ObservableCollection<CatalogItem>(catalog);
 
             MessengerInstance.Register<CatalogItemCreatedMessage>(this, OnCatalogItemCreated);
+        }
+
+        private async Task LoadCatalog()
+        {
+            IList<CatalogItem> catalog = await _catalogService.GetMovies();
+            Catalog = new ObservableCollection<CatalogItem>(catalog);
         }
 
         private void OnGenreCreated(GenreCreatedMessage message)

@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Fletnix.Model;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 
-namespace Fletnix.Repositories
+namespace Fletnix.Api.Repositories
 {
     public class CatalogItemRepository : IRepository<CatalogItem>
     {
@@ -27,12 +24,10 @@ namespace Fletnix.Repositories
             }
         }
 
-        public async Task<IList<CatalogItem>> Get()
+        public IList<CatalogItem> Get()
         {
-            var client = new HttpClient();
-            string json = await client.GetStringAsync(new Uri("https://localhost:44335/api/v1/catalogitem"));
-
-            return JsonConvert.DeserializeObject<List<CatalogItem>>(json);
+            var context = new FletnixContext();
+            return context.CatalogItems.ToList();
         }
 
         public CatalogItem GetById(int id)

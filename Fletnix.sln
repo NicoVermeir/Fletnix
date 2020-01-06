@@ -5,11 +5,25 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix", "Fletnix\Fletnix.csproj", "{5C7664AA-93C3-4B05-A3A1-14EE722B97C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Model", "Fletnix.Model\Fletnix.Model.csproj", "{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix.Model", "Fletnix.Model\Fletnix.Model.csproj", "{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Services", "Fletnix.Services\Fletnix.Services.csproj", "{1418C7EA-B0A4-412A-AA29-2217DE2892E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix.Services", "Fletnix.Services\Fletnix.Services.csproj", "{1418C7EA-B0A4-412A-AA29-2217DE2892E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Repositories", "Fletnix.Repositories\Fletnix.Repositories.csproj", "{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix.Repositories", "Fletnix.Repositories\Fletnix.Repositories.csproj", "{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Api", "Fletnix.Api\Fletnix.Api.csproj", "{5E5BF110-6323-44AC-8B7C-80E04A5DC385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{97C5DB7F-D36F-4F44-A0BD-6D57D620594F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{6DC148C6-83C2-4A6B-A25B-9156F4C73F2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{4F854481-43D9-4F52-BBA6-8EA8A694FD1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0DD33633-B62D-4386-891A-FECE67B989E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Api.Services", "Fletnix.Api.Services\Fletnix.Api.Services.csproj", "{5A52F4C1-C3D0-428C-9AA7-812E0FDCBEFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Api.Repositories", "Fletnix.Api.Repositories\Fletnix.Api.Repositories.csproj", "{13E7D20E-E442-46AD-ACD4-67D6B177704B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +47,34 @@ Global
 		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5BF110-6323-44AC-8B7C-80E04A5DC385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5BF110-6323-44AC-8B7C-80E04A5DC385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5BF110-6323-44AC-8B7C-80E04A5DC385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5BF110-6323-44AC-8B7C-80E04A5DC385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C5DB7F-D36F-4F44-A0BD-6D57D620594F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C5DB7F-D36F-4F44-A0BD-6D57D620594F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C5DB7F-D36F-4F44-A0BD-6D57D620594F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C5DB7F-D36F-4F44-A0BD-6D57D620594F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A52F4C1-C3D0-428C-9AA7-812E0FDCBEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A52F4C1-C3D0-428C-9AA7-812E0FDCBEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A52F4C1-C3D0-428C-9AA7-812E0FDCBEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A52F4C1-C3D0-428C-9AA7-812E0FDCBEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E7D20E-E442-46AD-ACD4-67D6B177704B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E7D20E-E442-46AD-ACD4-67D6B177704B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E7D20E-E442-46AD-ACD4-67D6B177704B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E7D20E-E442-46AD-ACD4-67D6B177704B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5C7664AA-93C3-4B05-A3A1-14EE722B97C7} = {6DC148C6-83C2-4A6B-A25B-9156F4C73F2F}
+		{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA} = {0DD33633-B62D-4386-891A-FECE67B989E0}
+		{1418C7EA-B0A4-412A-AA29-2217DE2892E8} = {6DC148C6-83C2-4A6B-A25B-9156F4C73F2F}
+		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37} = {6DC148C6-83C2-4A6B-A25B-9156F4C73F2F}
+		{5E5BF110-6323-44AC-8B7C-80E04A5DC385} = {4F854481-43D9-4F52-BBA6-8EA8A694FD1D}
+		{5A52F4C1-C3D0-428C-9AA7-812E0FDCBEFD} = {4F854481-43D9-4F52-BBA6-8EA8A694FD1D}
+		{13E7D20E-E442-46AD-ACD4-67D6B177704B} = {4F854481-43D9-4F52-BBA6-8EA8A694FD1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6841ACC8-E458-4ACD-950E-BDA05FEEB47D}

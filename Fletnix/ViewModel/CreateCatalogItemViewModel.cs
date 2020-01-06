@@ -6,6 +6,7 @@ using GalaSoft.MvvmLight.Command;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace Fletnix.ViewModel
 {
@@ -40,10 +41,16 @@ namespace Fletnix.ViewModel
             _genreService = genreService;
             NewCatalogItem = new CatalogItem();
 
-            IList<Genre> genres = _genreService.GetGenres();
+            //discardables
+            _ = LoadGenres();
+        }
 
+        private async Task LoadGenres()
+        {
+            IList<Genre> genres = await _genreService.GetGenres();
             Genres = new ObservableCollection<Genre>(genres);
         }
+
         public Genre genre
         {
             get => _genre;
