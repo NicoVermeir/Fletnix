@@ -18,6 +18,11 @@ namespace Fletnix.Services
             return _catalogRepository.Get();
         }
 
+        public CatalogItem GetById(int id)
+        {
+            return _catalogRepository.GetById(id);
+        }
+
         public void SaveCatalogItem(CatalogItem item)
         {
             _catalogRepository.Create(item);

@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix", "Fletnix\Fletnix.csproj", "{5C7664AA-93C3-4B05-A3A1-14EE722B97C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Model", "Fletnix.Model\Fletnix.Model.csproj", "{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix.Model", "Fletnix.Model\Fletnix.Model.csproj", "{940C0676-0AF5-4D2A-AF69-5DD7BB2166FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Services", "Fletnix.Services\Fletnix.Services.csproj", "{1418C7EA-B0A4-412A-AA29-2217DE2892E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix.Services", "Fletnix.Services\Fletnix.Services.csproj", "{1418C7EA-B0A4-412A-AA29-2217DE2892E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Repositories", "Fletnix.Repositories\Fletnix.Repositories.csproj", "{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fletnix.Repositories", "Fletnix.Repositories\Fletnix.Repositories.csproj", "{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fletnix.Web", "Fletnix.Web\Fletnix.Web.csproj", "{1F56C693-49A5-4304-9FDE-74A95AB23901}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CCE5DB3-B75A-4F30-AA00-7989F6E3FB37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F56C693-49A5-4304-9FDE-74A95AB23901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F56C693-49A5-4304-9FDE-74A95AB23901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F56C693-49A5-4304-9FDE-74A95AB23901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F56C693-49A5-4304-9FDE-74A95AB23901}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
